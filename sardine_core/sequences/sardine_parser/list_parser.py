@@ -152,6 +152,8 @@ class ListParser(BaseParser):
         try:
             final_pattern = self._result_parser.parse(pattern)
         except Exception as e:
+            if self.debug:
+                traceback.print_exc()
             print(f"[red][Pattern Language Error][/red]")
 
         if self.debug:

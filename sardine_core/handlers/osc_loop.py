@@ -14,6 +14,7 @@ class OSCLoop(BaseRunnerHandler):
 
     async def run(self):
         osc_startup()
+        print("XXX osc starting")
         try:
             while True:
                 osc_process()
